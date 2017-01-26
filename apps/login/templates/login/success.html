@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Successful!</title>
+</head>
+<body>
+<h2>Success! Welcome, {{request.session.first}}!</h2>
+<h3>Successfully registered or logged in!</h3>
+<!-- route is /logout, method is post -->
+<form action="/logout" method="post">
+	{% csrf_token %}
+	<input type="submit" value="Log out">
+</form>
+</body>
+</html>
